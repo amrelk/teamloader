@@ -1,0 +1,7 @@
+# RBE 300n GitHub Team Loader
+
+This set of scripts expects two CSV files to be placed in this directory. `github_usernames.csv` is from a google form sent to all the students and should have columns named `WPI Email Address` and `GitHub Username`. `roster.csv` can be downloaded from canvas after groups have been assigned in canvas. Groups should be named "Group 1", "Group 2", etc. or "Team 1", "Team 2", etc. (just make sure there aren't digits in the name other than the team number). Don't let students make their own group names, it'll be a huge pain and will break the script.
+
+When you have the CSVs in this directory, you can run `sheetmerger.py`. It will output a file called `merged.csv` and print a list of students who have not submitted their GitHub usernames via the form. You can run this as many times as you want, it doesn't do anything but combine the CSVs.
+
+Finally, you can run `teamloader.py`. This one actually does things to the GitHub organization, so make sure you know what you're doing before you start running it. You'll need to copy `config.example.json` to `config.json` and add a valid GitHub token. It needs to have a ton of perms lol -- i don't remember exactly which ones.
